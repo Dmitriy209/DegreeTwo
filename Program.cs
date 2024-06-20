@@ -22,7 +22,7 @@ namespace DegreeTwo
             int degree = 1;
             int baseInDegree = degreeBase;
             
-            while (baseInDegree < number)
+            while (baseInDegree <= number)
             {
                 baseInDegree *= degreeBase;
                 degree++;
