@@ -10,19 +10,25 @@ namespace DegreeTwo
     {
         static void Main(string[] args)
         {
+            int lowLimitRandom = 1;
+            int highLimitRandom = 1000;
+
             Random random = new Random();
-            int degree1 = random.Next(1, 100);
-            int degree = Convert.ToInt32(Console.ReadLine());
+            int number = random.Next(lowLimitRandom, highLimitRandom);
+
+            Console.WriteLine($"Загаданное число: {number}");
 
             int degreeBase = 2;
-            int minDegree = 0;
+            int degree = 1;
+            int baseInDegree = degreeBase;
 
-            for (int i = degree; i <= degree; i++)
+            while (baseInDegree <= number)
             {
-                degreeBase *= degreeBase;
-                Console.WriteLine(degreeBase);
+                baseInDegree *= degreeBase;
+                degree++;
             }
-            Console.WriteLine(degree);
+
+            Console.WriteLine($"{degreeBase} в степени {degree} равняется {baseInDegree} > {number}");
         }
     }
 }
